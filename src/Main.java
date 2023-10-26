@@ -17,23 +17,23 @@ public class Main {
 
         for(int i=0; i<groupSize; i++){
             System.out.println("Please enter the name of student #" + (i+1) + " and press [ENTER]: ");
-            String name = scanner.nextLine();
+            String name = scanner.next();
             students[i] = new Student(name);
         }
-        scanner.nextLine();
+        System.out.println();
 
         for(int i=0; i < groupSize; i++){
             System.out.println("Student #" + (i + 1) + ": " + students[i].getName());
         }
-        scanner.nextLine();
+        System.out.println();
 
         for(int i=0; i<groupSize; i++){
             System.out.println("Is student #" + (i + 1) + " (" + students[i].getName() + ") present? [Y/N + ENTER]: ");
-            String attendance = scanner.nextLine();
+            String attendance = scanner.next();
             boolean presence = attendance.equalsIgnoreCase("Y");
             students[i].setPresent(presence);
         }
-        scanner.nextLine();
+        System.out.println();
 
         for(int i=0; i<groupSize; i++){
             System.out.printf("Student #%d: %s      | Present: %s\n", (i+1),students[i].getName(), students[i].isPresent());
