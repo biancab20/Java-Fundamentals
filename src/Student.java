@@ -1,9 +1,21 @@
 public class Student {
-    public String name;
-    public boolean presence;
+    private String name;
+    private boolean isPresent;
 
-    public Student(String name, boolean presence) {
+    public Student(String name) {
         this.name = name;
-        this.presence = presence;
+        this.isPresent = false;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean isPresent() {
+        return isPresent;
+    }
+
+    public void setPresent(boolean present) {
+        isPresent = present;
     }
 }
